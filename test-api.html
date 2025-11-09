@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test</title>
+</head>
+<body>
+    <h1>Testing OpenWeatherMap API</h1>
+    <button onclick="testAPI()">Test API Key</button>
+    <pre id="result"></pre>
+
+    <script>
+        const API_KEY = '0c1aac541d154801fb6ad336177386c5';
+        
+        async function testAPI() {
+            const result = document.getElementById('result');
+            result.textContent = 'Testing...\n\n';
+            
+            // Test 1: Current Weather (Free)
+            try {
+                result.textContent += 'Test 1: Current Weather API (Free)\n';
+                const res1 = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=35.6762&lon=139.6503&appid=${API_KEY}`);
+                const data1 = await res1.json();
+                result.textContent += `Status: ${res1.status}\n`;
+                result.textContent += `Response: ${JSON.stringify(data1, null, 2)}\n\n`;
+            } catch (e) {
+                result.textContent += `Error: ${e.message}\n\n`;
+            }
+            
+            // Test 2: OneCall 2.5 (Deprecated for new keys)
+            try {
+                result.textContent += 'Test 2: OneCall 2.5 API (May not work for new keys)\n';
+                const res2 = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=35.6762&lon=139.6503&appid=${API_KEY}`);
+                const data2 = await res2.json();
+                result.textContent += `Status: ${res2.status}\n`;
+                result.textContent += `Response: ${JSON.stringify(data2, null, 2)}\n\n`;
+            } catch (e) {
+                result.textContent += `Error: ${e.message}\n\n`;
+            }
+            
+            // Test 3: OneCall 3.0 (Paid)
+            try {
+                result.textContent += 'Test 3: OneCall 3.0 API (Requires subscription)\n';
+                const res3 = await fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=35.6762&lon=139.6503&appid=${API_KEY}`);
+                const data3 = await res3.json();
+                result.textContent += `Status: ${res3.status}\n`;
+                result.textContent += `Response: ${JSON.stringify(data3, null, 2)}\n\n`;
+            } catch (e) {
+                result.textContent += `Error: ${e.message}\n\n`;
+            }
+        }
+    </script>
+</body>
+</html>
