@@ -26,6 +26,29 @@ A modern, real-time weather dashboard built with React, TypeScript, and Vite, fe
 ---
 
 ## 📸 Screenshots
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/aca206c6-eba5-4326-a8ff-2ee2eeaa6a35" alt="Home Screen" width="400">
+      <br /><em>Home Screen</em>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/e2d7dff9-dbe2-461f-b735-675a94591e91" alt="Chat Feature" width="400">
+      <br /><em>Weather Detials</em>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/b269f73f-254c-48e3-aa03-f7b41450ff68" alt="Admin Dashboard" width="400">
+      <br /><em>More Detials</em>
+    </td>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/32707142-7164-4880-9ecf-1ca9bd287b16" alt="Album Page" width="400">
+      <br /><em>Light Mode</em>
+    </td>
+  </tr>
+</table>
+
 <img width="1919" height="932" alt="image" src="https://github.com/user-attachments/assets/aca206c6-eba5-4326-a8ff-2ee2eeaa6a35" />
 <img width="1915" height="923" alt="image" src="https://github.com/user-attachments/assets/e2d7dff9-dbe2-461f-b735-675a94591e91" />
 <img width="1914" height="919" alt="image" src="https://github.com/user-attachments/assets/b269f73f-254c-48e3-aa03-f7b41450ff68" />
